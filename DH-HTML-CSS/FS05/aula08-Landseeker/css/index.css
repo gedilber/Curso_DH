@@ -1,0 +1,61 @@
+/* -- Regras Gerais Início -- */
+* {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+  font-size: 18px;
+}       
+/* -- Regras Gerais Fim -- */
+
+
+
+/* -- Media Queries Area Begin -- */
+@media only screen and (max-width: 540px){
+  
+  body {
+    width: 100vw;
+  }
+
+  header {
+    z-index: 2;
+    height: 10vh;
+  }
+  
+  header .container {
+    width: 50%;
+  }
+  
+  header .container ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+  }
+  
+  header .container ul li {
+    display: none;
+  }
+  
+  header .container ul .toggle-menu {
+    display: block;
+    font-size: 1.3em;
+  }
+  
+  header .logo-content {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  header .logo-content img {
+    width: 20%;
+  }
+  
+  .home-content .image-banner {
+    width: 100vw;
+  }
+}
+/* -- Media Queries Area End -- */

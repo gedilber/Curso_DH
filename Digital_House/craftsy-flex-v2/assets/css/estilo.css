@@ -1,0 +1,228 @@
+/* RESET */
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+/* HEADER (NAV ERDADE NAV) */
+nav {
+
+  /* ## Parte referente ao Flex Box ## */
+  display: flex; /* Definindo nossa nav como Flex Container */
+  flex-flow: row nowrap; /* flex-direction: row + flex-wrap: nowrap */
+  align-items: center;
+  justify-content: space-between;
+  
+  /* Parte de estilo apenas */
+  background-color: orange;
+  height: 75px;
+  margin: 75px 0; /* Estamos definindo que as margens 1. superior/inferior e 2. laterais - lembra-se do shorthand? ;) */
+
+}
+
+nav img {
+  
+  /* ## Parte referente ao Flex Box ## */
+  /* Como é um filho direto da nav - que é um flex container -, torna-se um Flex Item */
+  flex: 0 0 200px; /* flex-grow: 0 + flex-shrink: 0 + flex-basis: 200px | Não irá aumentar nem diminuir, sempre ficará com 200px */
+  order: 0; /* Definindo que será o primeiro item (a não ser que haja um item com order negativo */
+
+  /* Parte de estilo apenas */
+  width: 200px;
+  height: 200px;
+
+  /* Definindo o timing da animação - que será configurada no hover */
+  transition: all 0.8s ease-in-out; /* Short-hand para transition-property + transition-duration + transition-timing-function (poderíamos ter ainda o transition-delay) */
+}
+
+nav img:hover {
+  transform: rotate(-60deg); /* Declaramos que, no hover (ao passar o mouse sobre), o logo girará 60 graus no sentido anti-horário */
+}
+
+nav ul {
+
+  /* ## Parte referente ao Flex Box ## */
+  /* ### Parte referente à <ul> enquanto Flex Item */
+  flex: 1 1 auto; /* flex-grow: 1 + flex-shrink: 1 + flex-basis: auto | Pode diminuir, aumentar e sua 'base' é automática, respeitando o conteúdo */
+  order: 1; /* Como está declarado no HTML na ordem que deve ficar, não seria necessário declararmos essa propriedade... tá aqui mais para reforçar a aprendizagem */
+  
+  /* Como queremos tratar a lista como Flex Container, utilizaremos a propriedade flex */
+  display: flex; /* Perceba que não declaramos a direction, mas ainda assim ficou na horizontal, pois é o valor default */
+  justify-content: space-around;
+
+  /* Parte de estilo apenas */
+  list-style: none; /* Removendo o estilo default - aquelas bolinhas (bullets) da lista */
+
+}
+
+nav ul li a {
+  
+  /* Parte de estilo apenas */
+  text-decoration: none; /* Removendo o estilo default - underline */
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+nav ul li a:hover {
+  color: black; /* Transformando links em preto quando passamos o mouse sobre eles */
+}
+
+nav form {
+
+  /* ## Parte referente ao Flex Box ## */
+  flex: 0 1 auto; /* Estamos definindo que a busca do nosso menu poderá diminuir mas não aumentará */
+  order: 2; /* Como o default é 0 e declaramos o order 1 na lista, precisamos definir como order 2 para manter a ordem desejada */
+
+  /* Como queremos tratar o form como flex-container, utilizaremos a propriedade flex */
+  display: flex; /* Perceba que não declaramos a direction, mas ainda assim ficou na horizontal, pois é o valor default */
+  justify-content: flex-end;
+
+  /* Parte de estilo apenas */
+  padding-right: 20px; /* Como utilizamos o justify-content com valor space-between (para deixarmos os elementos nas extremidades), utilizaremos o padding-right para a busca não ficar 'grudada' no canto da janela */
+
+}
+
+/* MAIN E SECTION (PRODUTOS) */
+main {
+
+  /* Apenas uma margenzinha pra darmos um 'respiro' (área vazia para conferir uma leitura confortável ao usuário) */
+  margin: 36px;
+
+}
+
+section {
+
+  display: flex; /* Definindo <section> como um Flex Container (logo, os articles se tornarão Flex Items) */
+  flex-flow: row wrap; /* Definindo direção row e permitindo a 'quebra de linha' */
+  justify-content: space-between; /* Deixando as imagens das pontas nos cantos e o restante igualmente distribuído */
+  align-items: stretch; /* Definindo que todos os articles terão a mesma altura - 'esticará' a altura para que todos tenham a mesma altura que o item mais alto */
+}
+
+/* ARTICLE (PRODUTO) */
+article {
+
+  /* Tratando nossos articles como Flex Items */
+  flex: 1 1 30%; /* Os articles poderão aumentar e diminuir. Insira o valor AUTO no flex-basis (3o parâmetro do shorthand para ver como se comportam) */
+
+  /* Tratando nossos articles como Flex Containers */
+  display: flex;
+  flex-flow: column nowrap; /* Agora temos a direção como colunas */
+  justify-content: flex-start; /* Alinhando o conteúdo no início de acordo com a direção (no caso, na vertical, no topo) */
+  align-items: center; /* Centralizando o conteúdo no sentido transversal ao da direção (no caso, na horizontal) */
+
+  /* Parte de estilo apenas */
+  background-size: cover;
+  margin: 10px; /* Ao contrário do projeto anterior, as margens aqui ficam sempre distribuídas igualmente, sem gambiarras! hehehe */
+  padding: 10px;
+  height: 33vh; /* Declarando que os produtos terão no mínimo 1/3 da altura da tela (viewport height) */
+  transition: all 0.8s ease-in-out;
+
+}
+
+article:hover {
+  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.2)); /* Definindo hover com sombra com 3 px para a direita, 3 px para baixo, 3 px de blur (borrado) e 20% de opacidade (ou 80% de transparência) */
+}
+
+article:hover div {
+  /* Alterando a cor do título e do fundo */
+  color: black;
+  background-color: white;
+}
+
+article:hover img {
+  transform: scale(1.2) rotate(360deg); /* Transformando a imagem/label aumentando 20% o tamanho e rotacionando 360 graus quando passa o mouse por cima do article */
+}
+
+article img {
+
+  /* Tratando como Flex Item */
+  align-self: flex-end;
+  flex: 0 0 auto;
+
+  /* Aplicando estilo apenas */
+  width: 48px;
+  height: 48px;
+  transition: all 0.8s ease-in-out;
+
+}
+
+article div {
+
+  /* Tratando como Flex Item */
+  flex: 0 0 auto;
+  align-self: stretch;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin: auto -15px;
+  transition: all 0.8s ease-in-out;
+}
+
+article button {
+
+  /* Flex Item */
+  flex: 0 0 40px; /* Definindo que não diminuirá nem aumentará, e terá como valor base, 40px (no caso, no sentido vertical) */
+
+  /* Apenas estilo */
+  padding: 10px;
+  margin: 20px auto; /* Definindo margem vertical de 20px e centralizando na horizontal */
+  background-color: orange;
+  border-radius: 10px; /* Short-hand para aplicarmos o mesmo valor nos 4 cantos a serem arredondados */
+  border-style: none; /* Removendo aquele estilo padrão boniiiito que vem nos buttons */
+  filter: drop-shadow(3px 2px rgba(0,0,0,0.3)); /* Definindo uma sombra preta (com transparência por conta do A do rgba) com 3px para a direita e 2px para baixo */
+  transition: background-color 0.8s ease-in; /* Transição apenas na cor de fundo, demorando 0.8 segundos com timing ease-in */
+  font-weight: bold; /* Fonte espessa (negrito) */
+  cursor: pointer; /* Deixa o mouse como 'mãozinha' para deixar claro que é clicável */
+
+}
+
+article button:hover {
+  background-color: yellow;
+}
+
+/* IMAGENS E ORDENS (COMENTADAS) DOS PRODUTOS (BACKGROUND-IMAGES) */
+.product-1 {
+  background-image: url("../img/product-1.jpg");
+  /*order: 1;*/ /* Troque os valores (ou apenas descomente) para ver como se comportam os elementos */
+}
+
+.product-2 {
+  background-image: url("../img/product-2.jpg");
+  /*order: -1;*/
+}
+
+.product-3 {
+  background-image: url("../img/product-3.jpg");
+  /*order: 0;*/
+}
+
+/* FOOTER */
+footer {
+
+  /* ## Parte referente ao Flex Box ## */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Parte de estilo apenas */
+  border-radius: 60px 60px 0 0;
+  background-color: orange;
+  height: 75px;
+  color: white;
+  font-size: 16px; /* 16 pixels seria o tamanho mínimo legível, de acordo com o Google */
+  font-weight: bold;
+
+}
+
+/* EXTRA SÓ PRA QUEM LEU TODOS OS COMENTÁRIOS: align-content não é restrito a textos. Ele irá alinhar as linhas (para isso deve haver mais que uma linha) de um flex-container com wrap, mais ou menos como o align-items, mas com as 'rows'/linhas. Seu valor padrão é stretch. Saiba mais em: https://css-tricks.com/almanac/properties/a/align-content/ */
+/* Se você leu os comentários até aqui, mande a seguinte mensagem no grupo da turma: 'EU MANJO MUITO DE ALIGN-CONTENT!' */

@@ -1,0 +1,349 @@
+<!-- HTML INDEX -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Craftsy Flex | Index</title>
+    <link rel="shortcut icon" sizes="60x60" href="https://br.digitalhouse.com/wp-content/themes/dh/assets/img/icons/apple-icon-60x60.png">
+    <link rel="icon" type="image/png" sizes="60x60" href="https://br.digitalhouse.com/wp-content/themes/dh/assets/img/icons/apple-icon-60x60.png">
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="img/logo.png" alt="logo" />
+        <ul>
+          <li><a href="#smartphone">Smartphones</a></li>
+          <li><a href="#tablets">Tablets</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <form action="" class="form">
+          <input
+            type="text"
+            class="input-form"
+            placeholder="Pesquise o produto"
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </nav>
+    </header>
+    <main class="container">
+      <section>
+        <article class="product product-image1">
+          <img src="img/label.png" alt="" class="img-label" />
+          <div class="name-product">Nome do produto</div>
+          <button class="view-more">ver mais</button>
+        </article>
+
+        <article class="product product-image2">
+          <img src="img/promo.png" alt="" class="img-label" />
+          <div class="name-product">Nome do produto</div>
+          <button class="view-more">ver mais</button>
+        </article>
+
+        <article class="product product-image3">
+          <img src="img/label.png" alt="" class="img-label" />
+          <div class="name-product">Nome do produto</div>
+          <button class="view-more">ver mais</button>
+        </article>
+
+        <article class="product product-image1">
+          <img src="img/promo.png" alt="" class="img-label" />
+          <div class="name-product">Nome do produto</div>
+          <button class="view-more">ver mais</button>
+        </article>
+
+        <article class="product product-image2">
+          <img src="img/label.png" alt="" class="img-label" />
+          <div class="name-product">Nome do produto</div>
+          <button class="view-more">ver mais</button>
+        </article>
+
+        <article class="product product-image3">
+          <img src="img/promo.png" alt="" class="img-label" />
+          <div class="name-product">Nome do produto</div>
+          <button class="view-more">ver mais</button>
+        </article>
+      </section>
+    </main>
+    <footer>Craftsy - 2019</footer>
+  </body>
+</html> 
+
+##############################################################################
+
+<!-- HTML CONTATO -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Craftsy Flex | Contato</title>
+    <link rel="shortcut icon" sizes="60x60" href="https://br.digitalhouse.com/wp-content/themes/dh/assets/img/icons/apple-icon-60x60.png">
+    <link rel="icon" type="image/png" sizes="60x60" href="https://br.digitalhouse.com/wp-content/themes/dh/assets/img/icons/apple-icon-60x60.png">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/contato.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="menu">
+        <img src="img/logo.png" id="logo" alt="logo" />
+        <ul>
+          <li><a href="#smartphone">Smartphones</a></li>
+          <li><a href="#tablets">Tablets</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <form action="" class="form">
+          <input
+            type="text"
+            class="input-form"
+            placeholder="Pesquise o produto"
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </nav>
+    </header>
+    <main id="container">
+      <section>
+        <h1>Fale Conosco</h1>
+
+        <p>
+          Preencha o formulário a seguir e entraremos em contato!
+        </p>
+
+        <form action="" class="form-contato">
+          <div class="form-inline">
+            <div>
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" class="input-contato" />
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="input-contato"
+              />
+            </div>
+          </div>
+
+          <div class="form-inline">
+            <div>
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                name="mensagem"
+                id="mensagem"
+                cols="30"
+                rows="10"
+                class="textarea-contato"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-inline">
+            <div>
+              <button type="submit" class="botao-contato">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>Craftsy - 2019</footer>
+  </body>
+</html>
+
+##############################################################################
+
+/* CSS estilo.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* HEADER */
+header {
+  height: 10%;
+  position: relative;
+  width: 100%;
+}
+
+nav {
+  margin-top: 70px;
+  background-color: #ffb90f;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+header nav img {
+  width: 150px;
+  position: absolute;
+  top: -60px;
+}
+
+header nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  list-style: none;
+  margin-left: 160px;
+  height: 60px;
+}
+
+header nav ul li {
+  padding: 15px 0 0 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* PARAMOS AQUI! */
+  
+  /* CONTAINER */
+  .container {
+    width: 960px;
+    height: 650px;
+    margin: 40px auto;
+  }
+  
+  section .product {
+    height: 300px;
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+    background-color: #000000;
+    float: left;
+    margin: 0 0 20px 20px;
+    opacity: 1;
+    /* Aplica uma transição mais suave */
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  section .product-image1 {
+    background-image: url("../img/product-1.jpg");
+  }
+
+  section .product-image2 {
+    background-image: url("../img/product-2.jpg");
+  }
+
+  section .product-image3 {
+    background-image: url("../img/product-3.jpg");
+  }
+
+  section .product-image4 {
+    background-image: url("../img/product-4.jpg");
+  }
+  
+  section .img-label {
+    width: 70px;
+    position: absolute;
+    margin-left: 226px;
+    margin-top: 5px;
+  }
+  
+  section .name-product {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 128px;
+    position: absolute;
+    background-color: #101010;
+    height: 35px;
+    width: 300px;
+    padding-top: 10px;
+  }
+  
+  section .view-more {
+    background-color: #ff4500;
+    margin: 220px 0 0 100px;
+    color: white;
+    width: 90px;
+    height: 40px;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #ffb90f;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  /* PSEUDO-SELETORES */
+  section .product:hover {
+    opacity: 0.5;
+  }
+  
+  .input-form:focus {
+    border-color: blue;
+  }
+  
+  #menu ul li a:active {
+    color: black;
+  }
+
+##############################################################################
+
+/* CSS contato.css */
+
+h1, p {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+p {
+    font-size: 24px;
+}
+.form-contato{
+    display: block;
+    width: 640px;
+    margin: 0 auto;
+}
+section label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+iframe {
+    display: block;
+    margin: 20px auto;
+}
+
+section .form-inline div {
+    display: block;
+    margin: 10px;
+}
+
+section input {
+    width: 100%;
+    height: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+}

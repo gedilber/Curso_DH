@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap');
+
+body {
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #cccccc;
+}
+
+h1 {
+    color: rgba(0,0,0,0.3);
+}
+
+.outro-paragrafo{
+    color: orange;
+}

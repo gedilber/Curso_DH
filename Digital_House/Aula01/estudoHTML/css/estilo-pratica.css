@@ -1,0 +1,36 @@
+body {
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-size: 18px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 37px;
+    line-height: 46px;
+    font-family: 'Tahoma', Helvetica, sans-serif;
+    color: #000000;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    line-height: 38px;
+    font-family: 'Tahoma', Helvetica, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    line-height: 27px;
+    color: #333;
+    text-align: justify;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+/* isso é um comentario */
+
+/* desenvolvido por front-hendy */

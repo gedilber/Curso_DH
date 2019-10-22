@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de usuario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+<body>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+
+    </ul>
+    <form action="cadastro.html" method="POST">
+        <label for="nomeCompleto">Nome Completo</label><br>
+        <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Maria da Silva" required>
+        <br>
+        <label for="email">e-mail</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="msilva@gmail.com"required>
+        <br>
+        <label for="senha">Senha</label>
+        <br>
+        <input type="password" name="senha" id="senha" required>
+        <br>
+        <label for="cinema">Você já foi ao Cinema este ano?</label>
+        <br>
+        <label for="sim"><input type="radio" name="cinema" id="sim" value="sim">SIM</label>
+        <label for="nao"><input type="radio" name="cinema" id="nao" value="nao">NAO</label>
+        <br>
+        <label for="generoFilme">Selecione seu genero de Filmes preferidos:</label>
+        <br>
+        <label for="drama"><input type="checkbox" name="generoFilme" id="drama" value="drama">Drama</label>
+        <br>
+        <label for="terror"><input type="checkbox" name="generoFilme" id="terror" value="terror">Terror</label>
+        <br>
+        <label for="comedia"><input type="checkbox" name="generoFilme" id="comedia" value="comedia">Comedia</label>
+        <!-- Essa opção abaixo já força a seleção automatica da comedia. -->
+        <!-- <label for="comedia"><input type="checkbox" name="generoFilme" id="comedia" value="comedia" checked>Comedia</label> -->
+        <br>
+        <label for="mes">Selecione o Mês:</label>
+        <br>
+        <label for="janeiro"><input type="checkbox" name="mes" id="janeiro" value="janeiro">Janeiro</label><br>
+        <label for="fevereiro"><input type="checkbox" name="mes" id="fevereiro" value="fevereiro">Fevereiro</label><br>
+        <label for="marco"><input type="checkbox" name="mes" id="marco" value="marco">Março</label><br>
+        <label for="abril"><input type="checkbox" name="mes" id="abril" value="abril">Abril</label><br>
+        <label for="maio"><input type="checkbox" name="mes" id="maio" value="maio">Maio</label><br>
+        <label for="junho"><input type="checkbox" name="mes" id="junho" value="junho">Junho</label><br>
+        <label for="julho"><input type="checkbox" name="mes" id="julho" value="julho">Julho</label><br>
+        <label for="agosto"><input type="checkbox" name="mes" id="agosto" value="agosto">Agosto</label><br>
+        <label for="setembro"><input type="checkbox" name="mes" id="setembro" value="setembro">Setembro</label><br>
+        <label for="outubro"><input type="checkbox" name="mes" id="outubro" value="outubro">Outubro</label><br>
+        <label for="novembro"><input type="checkbox" name="mes" id="novembro" value="novembro">Novembro</label><br>
+        <label for="dezembro"><input type="checkbox" name="mes" id="dezembroo" value="dezembro">Dezembro</label><br>
+
+        <label for="mes">Escolha um mês</label><br>
+        <select name="mes" >
+            <option selected disabled>Selecione um Mês</option>
+            <option value="janeiro" id="janeiro">Janeiro</option>
+            <option value="fevereiro" id="fevereiro">Fevereiro</option>
+            <option value="marco" id="marco">Março</option>
+            <option value="abril" id="abril">Abril</option>
+            <option value="maio" id="maio">Maio</option>
+            <option value="junho" id="junho">Junho</option>
+            <option value="julho" id="julho">Julho</option>
+            <option value="agosto" id="agosto">Agosto</option>
+            <option value="setembro" id="setembro">Setembro</option>
+            <option value="outubro" id="outubro">Outubro</option>
+            <option value="novembro" id="novembro">Novembro</option>
+            <option value="dezembro" id="dezembro">Dezembro</option>
+        </select>
+            <br>
+        
+            <label for="mes">Escolha um mês</label><br>
+            <select name="mes" id="mes" >
+                
+                <option value="janeiro" >Janeiro</option>
+                <option value="fevereiro" >Fevereiro</option>
+                <option value="marco" >Março</option>
+                <option value="abril" >Abril</option>
+                <option value="maio" >Maio</option>
+                <option value="junho" >Junho</option>
+            </select>
+            <br>
+
+        
+        
+        <label for="genero">Genero</label><br>
+        <select name="genero">
+            <option selected disabled>Selecione uma opção</option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="nao binario">Não Binario</option>
+            <option value="N/A">N/A</option>
+        </select>
+        <br>
+        <label for="paisOrigem">País de Origem</label><br>
+        <select name="paisOrigem">
+            <option selected disabled>Selecione o Pais</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Angola">Angola</option>
+            <option value="Canadá">Canada</option>
+        </select>
+        <br>
+        <label for="comentarios">Comentários</label>
+        <br>
+        <textarea name="cometarios" id="comentarios" cols="30" rows="3">Digite seu comentário aqui!</textarea>
+        <br>
+        <!-- <input type="submit" name="Enviar" value="Enviar"> -->
+        <button type="button">Validar Campos</button>
+        <button type="reset">Limpar Campos</button>
+        <button type="submit">Enviar</button>
+        <br>
+
+        <label for="mes">Selecione um mês</label><br>
+        <select name="mes" id="mes">
+            <option selected disabled>Selecione um Mês</option>
+            <option value="janeiro">Janeiro</option>
+            <option value="fevereiro">Fevereiro</option>
+            <option value="marco">Março</option>
+            <option value="abril">Abril</option>
+            <option value="maio">Maio</option>
+            <option value="junho">Junho</option>
+            <option value="julho">Julho</option>
+            <option value="agosto">Agosto</option>
+            <option value="setembro">Setembro</option>
+            <option value="outubro">Outubro</option>
+            <option value="novembro">Novembro</option>
+            <option value="dezembro">Dezembro</option>
+        </select>
+
+    </form>
+</body>
+</html>
